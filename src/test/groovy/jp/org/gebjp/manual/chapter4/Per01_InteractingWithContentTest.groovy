@@ -82,13 +82,13 @@ class Per01_InteractingWithContentTest extends GebReportingSpec {
 
     and:
     //debug.printContents($("a"))
-    $("a").size() == 47
+    $("a").size() == 42
 
     //debug.printContents($("a", href: contains("www.gebish.org")))
-    $("a", href: contains("www.gebish.org")).size() == 32
+    $("a", href: contains("www.gebish.org")).size() == 28
 
     //debug.printContents($("a", href: contains("www.gebish.org") ,text:""))
-    $("a", href: contains("www.gebish.org") ,text:"").size() == 22
+    $("a", href: contains("www.gebish.org") ,text:"").size() == 18
   }
 
   /**
@@ -122,25 +122,25 @@ class Per01_InteractingWithContentTest extends GebReportingSpec {
 
     and:
     //debug.printContents($("a"))
-    $("a").size() == 47
+    $("a").size() == 42
 
     //debug.printContents($("a", href: startsWith("http://www.gebish.org")))
-    $("a", href: startsWith("http://www.gebish.org")).size() == 32
-    $("a", href: notStartsWith("http://www.gebish.org")).size() == 15
+    $("a", href: startsWith("http://www.gebish.org")).size() == 28
+    $("a", href: notStartsWith("http://www.gebish.org")).size() == 14
 
     //debug.printContents($("a", href: contains("manual")))
-    $("a", href: contains("manual")).size() == 24
-    $("a", href: notContains("manual")).size() == 23
+    $("a", href: contains("manual")).size() == 20
+    $("a", href: notContains("manual")).size() == 22
 
     //debug.printContents($("a", href: endsWith("/api/")))
-    $("a", href: endsWith("/api/")).size() == 11
-    $("a", href: notEndsWith("/api/")).size() == 36
+    $("a", href: endsWith("/api/")).size() == 9
+    $("a", href: notEndsWith("/api/")).size() == 33
 
     //debug.printContents($("a", text: containsWord("Page")))
     //debug.printContents($("a", text: notContainsWord("Page")))
     //"PageObjects"はcontainsWordでは合致しない。
     $("a", text: containsWord("Page")).size() == 2
-    $("a", text: notContainsWord("Page")).size() == 45
+    $("a", text: notContainsWord("Page")).size() == 40
 
   }
 
